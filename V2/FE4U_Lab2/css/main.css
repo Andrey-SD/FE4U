@@ -35,31 +35,33 @@ body {
 
 .shadow-box {
 	box-shadow: 0px 0px 16px -10px var(--text-color-a);
-	max-width: 1000px;
+	max-width: 1200px;
 	padding: 20px 100px;
 	margin: 0 auto;
-	background: var(--background-b);
+	background: var(--background-a);
 }
 
-.d-flex-block {
+.d-flex-block,
+.flex-block {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .column {
-	margin-top: 10px;
+	margin-top: 53px;
 	margin-bottom: 10px;
 }
 
 .logo {
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 2.5rem;
+	font-size: 3.5rem;
 	color: var(--background-a);
 	text-shadow: 2px 1px 0px var(--text-color-b), -2px -1px 0px var(--border-а);
 }
 
 .logo:hover {
+	color: #eeeeee;
 	text-shadow: 3px 1px 0px var(--text-color-b), -3px -1px 0px var(--border-а);
 }
 
@@ -70,10 +72,14 @@ body {
 	border-style: solid;
 }
 
+.square-link.gr-link,
+.square-link.or-link {
+	font-size: 0.8rem;
+}
+
 .square-link.gr-link {
 	color: var(--text-color-a);
 	border-color: var(--text-color-a);
-	font-size: 0.8rem;
 }
 
 .square-link.gr-link:hover {
@@ -81,7 +87,6 @@ body {
 }
 
 .square-link.or-link {
-	font-size: 0.8rem;
 	border-color: var(--border-а);
 }
 
@@ -91,7 +96,8 @@ body {
 }
 
 .or-link,
-.link-block li {
+.link-block li,
+.teacher-inicial {
 	color: var(--border-а);
 }
 
@@ -101,8 +107,12 @@ body {
 
 .or-link,
 .or-link[href="#addTeacher"] {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 700;
+}
+
+.or-link:hover {
+	color: var(--border-b);
 }
 
 .link-block li {
@@ -111,8 +121,8 @@ body {
 
 .separate-block {
 	width: 50%;
-	margin: 30px auto;
-	margin-bottom: 15px;
+	margin: 40px auto;
+	margin-bottom: 30px;
 	color: var(--text-color-b);
 }
 
@@ -123,33 +133,312 @@ body {
 	margin-bottom: 20px;
 }
 
+.filter-block {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
 .filter-block input,
 .filter-block label,
 .filter-block select {
 	display: inline-block;
 }
 
-.v-separete-line {
-
-}
-
-.v-separete-line,
-select {
-	padding: 5px;
-}
-
-.v-separete-line {}
-
-select {
-	font-family: NotoSans;
-}
-
 .filter-block label {
 	color: var(--text-color-a);
 	font-size: 0.8rem;
-	margin-right: 10px;
+	margin-right: 5px;
 }
 
+.v-separete-line {
+	border-right: 1px dotted var(--text-color-b);
+	padding-right: 12px;
+	margin: 0 4px;
+	height: 33px;
+}
+
+select {
+	padding: 5px;
+	font-family: NotoSans;
+}
+
+.grid-block {
+	display: grid;
+	grid-gap: 50px;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.teacher-card {
+	margin-top: 35px;
+	max-width: 150px;
+	width: 100%;
+	justify-self: center;
+	text-align: center;
+}
+
+.teacher-avatar {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 4px solid var(--border-а);
+}
+
+.teacher-photo {
+	width: 100%;
+}
+
+.teacher-avatar:hover * {
+	transform: scale(1.2);
+	color: var(--border-b);
+}
+
+.teacher-avatar:hover {
+	border-color: var(--border-b);
+}
+
+.teacher-avatar>h1 {
+	width: 140px;
+	height: 140px;
+	text-align: center;
+}
+
+.teacher-inicial {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+}
+
+
+.teacher-name {
+	font-size: 1.5rem;
+	margin-top: 10px;
+}
+
+.teacher-speciality {
+	font-size: 1rem;
+	color: var(--text-color-a);
+	white-space: nowrap;
+}
+
+.teacher-location {
+	font-size: 0.7rem;
+	margin: 10px 0;
+}
+
+.statistic-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.statistic-table thead {
+	border-bottom: 1px solid #000000;
+}
+
+.statistic-table th {
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+.statistic-table th,
+.statistic-table td {
+	padding: 10px;
+	text-align: center;
+}
+
+.statistic-table th:first-child,
+.statistic-table td:first-child {
+	text-align: left;
+}
+
+.statistic-table th:hover {
+	border-bottom: 2px solid black;
+	cursor: pointer;
+}
+
+.statistic-table tr:nth-child(even) {
+	background: #f9f5f9;
+}
+
+.statistic-table td {
+	font-weight: 400;
+	font-size: 0.9rem;
+}
+
+.pages-link a,
+.pop-email,
+.toggle-map {
+	color: #1ab7d9;
+	font-size: 0.8rem;
+}
+
+.scroll-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.prev-link {
+	left: -25px;
+}
+
+.prev-link,
+.next-link {
+	position: relative;
+	top: -10px;
+	font-size: 3rem;
+	color: var(--popup-header-bg);
+}
+
+.scrollmenu::-webkit-scrollbar {
+	display: none;
+}
+
+.scrollmenu {
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.scrollmenu>.teacher-card {
+	display: inline-block;
+	text-align: center;
+	margin: 24px;
+}
+
+.scrollmenu .teacher-speciality {
+	display: none;
+}
+
+.about-p {
+	color: var(--popup-header-bg);
+	margin: 20px 0;
+	font-size: 0.9rem;
+}
+
+#t-info-pop-up {
+	display: none;
+}
+
+#t-info-pop-up:target {
+	display: block;
+}
+
+.pop-up {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: var(--popup-bg);
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+}
+
+.pop-window {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	max-width: 700px;
+	background: #fff;
+}
+
+.pop-header {
+	background: var(--popup-header-bg);
+	color: var(--background-a);
+	font-family: NotoSans;
+}
+
+.pop-header,
+.pop-body {
+	padding: 20px;
+}
+
+.pop-title {
+	font-size: 1rem;
+	display: inline-block;
+}
+
+.pop-close {
+	color: inherit;
+	float: right;
+}
+
+.pop-body {
+	background: var(--background-b);
+}
+
+.pop-t-info {
+	align-items: start;
+}
+
+.pop-t-photo {
+	width: 100%;
+}
+
+.pop-t-name {
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.pop-t-detail {
+	padding-left: 20px;
+}
+
+.pop-t-subj {
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
+.pop-t-detail li {
+	font-size: 0.6rem;
+	margin-bottom: 10px;
+}
+
+#map-show {
+	display: none;
+}
+
+#map-show:target {
+	display: block;
+}
+
+#addTeacher {
+	display: none;
+}
+
+#addTeacher:target {
+	display: block;
+}
+
+#addTeacher label,
+#addTeacher input,
+#addTeacher select,
+#addTeacher textarea,
+.submit {
+	margin: 7px 5px 3px 3px;
+	display: block;
+}
+
+#addTeacher textarea {
+	width: 100%;
+	height: 75px;
+}
+
+#addTeacher input,
+#addTeacher select {
+	padding: 3px;
+	width: 100%;
+}
+
+.submit {
+	width: 100%;
+	background: var(--background-a);
+	padding: 15px;
+	color: var(--border-а);
+	border-color:var(--border-а) ;
+}
 
 @media (max-width: 768px) {
 	.shadow-box {
@@ -166,4 +455,12 @@ select {
 		display: block;
 	}
 
+	.v-separete-line {
+		display: none;
+	}
+
+	.prev-link,
+	.next-link {
+		display: none;
+	}
 }
