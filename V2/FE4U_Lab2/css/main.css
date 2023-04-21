@@ -1,0 +1,169 @@
+:root {
+	--border-а: #fa5b55;
+	--border-b: #dc3721;
+	--background-a: #ffffff;
+	--background-b: #f7f7f7;
+	--text-color-a: #979797;
+	--text-color-b: #1e1e1e;
+	--popup-bg: rgba(109, 108, 108, 0.8);
+	--popup-header-bg: #2e2e2e;
+}
+
+@font-face {
+	font-family: "NotoSans";
+	src: url(../fonts/NotoSansJP-VariableFont_wght.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background: var(--background-b);
+	font-family: "NotoSans";
+}
+
+.shadow-box {
+	box-shadow: 0px 0px 16px -10px var(--text-color-a);
+	max-width: 1000px;
+	padding: 20px 100px;
+	margin: 0 auto;
+	background: var(--background-b);
+}
+
+.d-flex-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.column {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.logo {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 2.5rem;
+	color: var(--background-a);
+	text-shadow: 2px 1px 0px var(--text-color-b), -2px -1px 0px var(--border-а);
+}
+
+.logo:hover {
+	text-shadow: 3px 1px 0px var(--text-color-b), -3px -1px 0px var(--border-а);
+}
+
+.square-link {
+	padding: 10px 15px;
+	margin-left: 10px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.square-link.gr-link {
+	color: var(--text-color-a);
+	border-color: var(--text-color-a);
+	font-size: 0.8rem;
+}
+
+.square-link.gr-link:hover {
+	padding-right: 50px;
+}
+
+.square-link.or-link {
+	font-size: 0.8rem;
+	border-color: var(--border-а);
+}
+
+.square-link.or-link:hover {
+	background: var(--border-а);
+	color: var(--background-a);
+}
+
+.or-link,
+.link-block li {
+	color: var(--border-а);
+}
+
+.link-block li {
+	margin-right: 15px;
+}
+
+.or-link,
+.or-link[href="#addTeacher"] {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.link-block li {
+	display: inline-block;
+}
+
+.separate-block {
+	width: 50%;
+	margin: 30px auto;
+	margin-bottom: 15px;
+	color: var(--text-color-b);
+}
+
+.section-h {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.filter-block input,
+.filter-block label,
+.filter-block select {
+	display: inline-block;
+}
+
+.v-separete-line {
+
+}
+
+.v-separete-line,
+select {
+	padding: 5px;
+}
+
+.v-separete-line {}
+
+select {
+	font-family: NotoSans;
+}
+
+.filter-block label {
+	color: var(--text-color-a);
+	font-size: 0.8rem;
+	margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+	.shadow-box {
+		padding: 20px 20px;
+		width: 95%;
+	}
+
+	.d-flex-block {
+		display: block;
+	}
+
+	.square-link {
+		margin: 10px 0;
+		display: block;
+	}
+
+}

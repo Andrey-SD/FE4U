@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Завдання 1</title>
+</head>
+
+<body>
+	<h1>Завдання 1</h1>
+	<form>
+		<label for="fullname">Повне ім’я:</label>
+		<input id="fullname" type="text" name="fullname" required>
+		<br>
+
+		<label>Стать:</label>
+		<label for="male">Чоловіча</label>
+		<input id="male" type="radio" value="male" name="sex" required>
+		<label for="female">Жіноча</label>
+		<input id="female" type="radio" value="female" name="sex" required>
+		<br>
+
+		<label for="birthday">Дата народження:</label>
+		<input id="birthday" type="date" name="birthday" required>
+		<br>
+
+		<label for="email">Електронна пошта:</label>
+		<input id="email" type="email" name="email" required>
+		<br>
+
+		<label for="tel">Телефон:</label>
+		<input id="tel" type="tel" name="tel" pattern="[0-9]+" required>
+		<br>
+
+		<label for="bg-color">Бажаний колір фону:</label>
+		<input id="bg-color" type="color" name="bg-color">
+		<br>
+
+		<label for="country">Країна:</label>
+		<input id="country" type="text" name="country" required>
+		<br>
+
+		<label for="city">Місто:</label>
+		<input id="city" type="text" name="city" required>
+		<br>
+
+		<label for="comment">Коментар:</label>
+		<textarea id="comment" name="comment"></textarea>
+		<br>
+
+		<input type="submit" value="Додати">
+	</form>
+</body>
+
+</html>

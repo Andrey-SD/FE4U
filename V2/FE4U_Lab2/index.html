@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Викладачі</title>
+</head>
+
+<body>
+	<div class="shadow-box">
+		<!-- Шапка сторінки -->
+
+		<header class="content-block">
+			<div class="d-flex-block">
+				<div class="column left-column">
+					<h1><a href="#" class="logo">Teachinder</a></h1>
+				</div>
+				<div class="column right-column">
+					<a href="#" class="square-link gr-link" style="font-weight: 500;">Ім'я, коментар або вік для пошуку</a>
+					<a href="#" class="square-link or-link" style="font-weight: 500;">Пошук</a>
+				</div>
+			</div>
+			<div class="d-flex-block">
+				<div class="column left-column">
+					<nav>
+						<ul class="link-block">
+							<li><a href="#teacher" class="or-link">Вчителі</a></li>
+							<li><a href="#statistic" class="or-link">Статистика</a></li>
+							<li><a href="#favorites" class="or-link">Обрані</a></li>
+							<li><a href="#about-section" class="or-link">Про нас</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="column right-column">
+					<a href="#addTeacher" class="square-link or-link">Додати вчителя</a>
+				</div>
+			</div>
+			<hr class="separate-block">
+		</header>
+
+		<!-- Блок "Топ вчителі" -->
+
+		<section id="teacher" class="content-block">
+			<h1 class="section-h">Топ вчителі</h1>
+			<div class="filter-block">
+				<div>
+					<form action="#" method="post">
+						<div class="d-flex-block">
+							<div class="v-separete-line">
+								<label for="age">Вік</label>
+								<select id="age" name="age">
+									<option value="1">18-31</option>
+									<option value="2">32-42</option>
+									<option value="3">43-53</option>
+									<option value="4">54-64</option>
+									<option value="5">64-більше</option>
+								</select>
+							</div>
+							<div class="v-separete-line">
+								<label for="region">Region</label>
+								<select id="region" name="region">
+									<option value="Europe">Європа</option>
+									<option value="Asia">Азія</option>
+									<option value="Africa">Африка</option>
+									<option value="N_America">Північна Америка</option>
+									<option value="S-America">Південна Америка/option>
+									<option value="Australia">Австралія</option>
+								</select>
+							</div>
+							<div class="v-separete-line">
+								<label for="sex">Стать</label>
+								<select id="sex" name="sex">
+									<option value="Male">Жінка</option>
+									<option value="Female">Чоловік</option>
+								</select>
+							</div>
+							<div class="v-separete-line">
+								<input type="checkbox" name="only-photo" id="only-photo">
+								<label for="only-favorits">Тількі обрані</label>
+							</div>
+							<input type="checkbox" name="only-favorits" id="only-favorits">
+							<label for="only-photo">Тільки з фото</label>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="teachers-card-block grid-block">
+				<div class="teacher-card">
+					<div class="teacher-avatar">
+						<img class="teacher-photo" src="image/img(1).webp" alt="">
+					</div>
+					<h2 class="teacher-name">
+						Ігор
+						<br>
+						Ткачук
+					</h2>
+					<p class="teacher-speciality">Хімія</p>
+					<p class="teacher-location">Україна</p>
+				</div>
+
+			</div>
+			<hr class="separate-block">
+		</section>
+
+		<!-- Блок "Статистика" -->
+
+		<section id="statistic" class="content-block">
+			<h1 class="section-h">Статистика</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Ім'я</th>
+						<th>Предмет</th>
+						<th>Вік</th>
+						<th>Стать</th>
+						<th>Національність</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Дейзі Олександр</td>
+						<td>Хімія</td>
+						<td>28</td>
+						<td>Жінка</td>
+						<td>В'єтнам</td>
+					</tr>
+					<tr>
+						<td>Джулла Бредлі</td>
+						<td>Математика</td>
+						<td>26</td>
+						<td>Жінка</td>
+						<td>США</td>
+					</tr>
+					<tr>
+						<td>Рита Харт</td>
+						<td>Мистецтво</td>
+						<td>41</td>
+						<td>Жінка</td>
+						<td>Ірландія</td>
+					</tr>
+					<tr>
+						<td>Джонатан Джейкобс</td>
+						<td>Математика</td>
+						<td>52</td>
+						<td>Чоловік</td>
+						<td>Англія</td>
+					</tr>
+					<tr>
+						<td>Натаніель Вайт</td>
+						<td>Інформатика</td>
+						<td>37</td>
+						<td>Чоловік</td>
+						<td>Австрія</td>
+					</tr>
+					<tr>
+						<td>Френк Медіна</td>
+						<td>Англійська</td>
+						<td>43</td>
+						<td>Друг</td>
+						<td>Італія</td>
+					</tr>
+					<tr>
+						<td>Елла Кертіс</td>
+						<td>Шахи</td>
+						<td>34</td>
+						<td>Жінка</td>
+						<td>США</td>
+					</tr>
+					<tr>
+						<td>Клер Сіммонс</td>
+						<td>Мистецтво</td>
+						<td>38</td>
+						<td>Жінка</td>
+						<td>Нідерланди</td>
+					</tr>
+					<tr>
+						<td>Бенджамін Найт</td>
+						<td>Біологія</td>
+						<td>44</td>
+						<td>Чоловік</td>
+						<td>Шотландія</td>
+					</tr>
+					<tr>
+						<td>Норма Роуз</td>
+						<td>Статистика</td>
+						<td>36</td>
+						<td>Жінка</td>
+						<td>Франція</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="pages-link">
+				<a href="" class="current-page">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">...</a>
+				<a href="">Остання</a>
+			</div>
+			<hr class="separate-block">
+		</section>
+
+		<!-- Блок "Обрані" -->
+
+		<section id="favorites" class="content-block">
+			<h1 class="section-h">Обрані</h1>
+			<div class="card">
+				<div class="card-content">
+					<div class="teacher-card">
+						<div class="teacher-avatar">
+							<img class="teacher-photo" src="image/img(1).webp" alt="">
+						</div>
+						<h2 class="teacher-name">
+							Ігор
+							<br>
+							Ткачук
+						</h2>
+						<p class="teacher-speciality">Хімія</p>
+						<p class="teacher-location">Україна</p>
+					</div>
+				</div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+				<div class="card-content"></div>
+			</div>
+			<hr class="separate-block">
+		</section>
+
+		<!-- Блок "Про нас" -->
+
+		<div id="about-section" class="content-block">
+			<p class="about-p">Але я повинен пояснити вам, як народилася вся ця помилкова ідея про засудження задоволення і
+				хвалу болю, і я дам вам повний опис системи та викладу фактичні вчення великого дослідника істини,
+				майстер-будівельник людського щастя. Ніхто не відкидає, не любить і не уникає самої насолоди, тому що це
+				задоволення, а тому, що ті, хто не вміє домагатися задоволення, раціонально стикаються з наслідками, які є
+				надзвичайно болючими. І знову немає тих, хто любить або переслідує або хоче отримати біль самостійно, тому що це
+				біль, але іноді трапляються обставини, коли праця і біль можуть доставити йому величезне задоволення.
+				<!-- З іншого боку, ми викриваємо з праведним обуренням і неприязнью до людей, які настільки спокушені і деморалізовані
+			принадами задоволення моменту, настільки засліплені бажанням, що не можуть передбачити біль і біду, які
+			обов'язково настануть; і однакова провина належить тим, хто не виконує своїх обов’язків через слабкість волі, що
+			те саме, що сказати через уникнення праці та болю. Ці випадки абсолютно прості і їх легко відрізнити. У вільну
+			годину, коли наша свобода вибору не обмежена і коли ніщо не заважає нам робити те, що нам найбільше подобається,
+			ми повинні вітати кожне задоволення і уникати кожного болю. -->
+			</p>
+			<p class="about-p">
+				Візьмемо тривіальний приклад, який з нас коли -небудь виконує важкі фізичні вправи, за винятком того, щоб
+				отримати
+				певну
+				перевагу.
+			</p>
+			<p class="about-p">
+				Але хто має право звинувачувати чоловіка, який вирішив насолоджуватися задоволенням, що не має
+				дратівливих наслідків, або того, хто уникає болю, який не викликає задоволення?
+			</p>
+		</div>
+
+		<!-- Підвал -->
+
+		<footer class="content-block">
+			<div class="d-flex-block">
+				<div class="column left-column">
+					<ul class="link-block">
+						<li><a href="#teacher" class="or-link">Вчителі</a></li>
+						<li><a href="#statistic" class="or-link">Статистика</a></li>
+						<li><a href="#favorites" class="or-link">Обрані</a></li>
+						<li><a href="#about-section" class="or-link">Про нас</a></li>
+					</ul>
+				</div>
+				<div class="column right-column">
+					<a href="" class="square-link or-link">Додати вчителя</a>
+				</div>
+			</div>
+		</footer>
+
+
+
+	</div>
+</body>
+
+</html>
