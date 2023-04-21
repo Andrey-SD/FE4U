@@ -71,7 +71,7 @@ td:not(:first-child) {
 }
 
 select {
-	padding: 5px;
+	padding: 2px;
 	font-family: NotoSans;
 }
 
@@ -310,6 +310,15 @@ ul.fl {
 	.prev-link,
 	.next-link {
 		display: none;
+	}
+
+	#add-pop-up label,
+	#add-pop-up input,
+	#add-pop-up select,
+	#add-pop-up textarea,
+	#add-pop-up .submit {
+		margin: 2px 5px 2px 3px !important;
+		font-size: 0.5rem;
 	}
 }
 
