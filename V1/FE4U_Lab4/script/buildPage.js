@@ -86,8 +86,7 @@ searchLink.addEventListener('click', () => {
         const teachersContainer = document.getElementById('teachers-container');
         buildTeachersList(findTeacher, teachersContainer);
     }
-})
-
+});
 
 const sortStaticHeader = document.getElementById('sortStaticHeader');
 sortStaticHeader.addEventListener('click', (event) => {
@@ -95,7 +94,12 @@ sortStaticHeader.addEventListener('click', (event) => {
     const staticTeacher = sortArray(formatObject(), event.target.dataset.sort);
     buildStaticTable(staticTeacher, staticContainer);
     console.log(staticTeacher);
-})
+});
+
+// Завдання 5
+
+
+
 
 
 // відображаемо вчителів при завантаженні сторінки
