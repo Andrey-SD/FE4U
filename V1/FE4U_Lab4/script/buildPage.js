@@ -1,4 +1,4 @@
-import { formatObject, findObject, filterArr } from "./script.js";
+import { formatObject, findObject, filterArr, sortArray } from "./script.js";
 
 // Завдання 1
 
@@ -33,6 +33,7 @@ const buildTeachersList = (teachersList, section) => {
     });
 };
 
+
 // Завдання 2
 
 const form = document.querySelector('form');
@@ -50,6 +51,7 @@ form.addEventListener('change', (event) => {
     buildTeachersList(filterTeacher, teachersContainer);
 });
 
+
 // Завдання 3
 
 const buildStaticTable = (teachersList, section) => {
@@ -61,13 +63,21 @@ const buildStaticTable = (teachersList, section) => {
                     <td>${obj.full_name}</td>
                     <td>${obj.course}</td>
                     <td>${obj.age}</td>
-                    <td>${obj.gender}</td>${obj.country}
+                    <td>${obj.gender}</td>
                     <td>${obj.country}</td>
                 </tr>
         `;
         section.insertAdjacentHTML('beforeend', HTMLString);
     });
 }
+
+const sortStaticHeader = document.getElementById('sortStaticHeader');
+sortStaticHeader.addEventListener('click', (event) => {
+    const staticContainer = document.querySelector('#stat-table tbody');
+    const staticTeacher = sortArray(formatObject(), event.target.dataset.sort);
+    buildStaticTable(staticTeacher, staticContainer);
+    console.log(staticTeacher);
+})
 
 
 // відображаемо вчителів при завантаженні сторінки
@@ -80,6 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const favoriteTeacherContainer = document.getElementById('favorite-teachers-container');
     const favoriteTeacher = findObject(formatObject(), 'favorite', true);
     buildTeachersList(favoriteTeacher, favoriteTeacherContainer);
+
+    const staticContainer = document.querySelector('#stat-table tbody');
+    const staticTeacher = sortArray(formatObject(), 'full_name');
+    buildStaticTable(staticTeacher, staticContainer);
 });
 
 

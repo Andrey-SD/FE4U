@@ -79,6 +79,10 @@ export const formatObject = (arr1 = randomUserMock, arr2 = additionalUsers) => {
             obj.id = generateId(11);
         }
 
+        if (typeof (obj.age) != 'number') {
+            obj.age = randomNumber(65);
+        }
+
         if (obj.course == null || obj.course == undefined) {
             obj.course = courses[randomNumber(courses.length - 1)];
         }
@@ -159,12 +163,18 @@ export const filterArr = (arr, country, age, gender, favorite) => {
     );
 }
 
-export const sortArray = (arr, param, order) => {
+export const sortArray = (arr, param, order = 'asc') => {
     if (!arr || !param || !order) {
         return arr;
     }
 
-    const validParameters = ['full_name', 'age', 'b_day', 'country'];
+    const validParameters = [
+        'full_name',
+        'course',
+        'age',
+        'gender',
+        'country'
+    ];
 
     if (!validParameters.includes(param)) {
         return arr;

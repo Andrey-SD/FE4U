@@ -104,12 +104,12 @@
         <h1 class="section-title">Statistics</h1>
         <table id="stat-table">
             <thead>
-                <tr>
-                    <th style="text-align: left;">Name</th>
-                    <th>Speciality</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                    <th>Nationality</th>
+                <tr id="sortStaticHeader">
+                    <th data-sort="full_name"  style="text-align: left;">Name</th>
+                    <th data-sort="course" >Speciality</th>
+                    <th data-sort="age" >Age</th>
+                    <th data-sort="gender" >Gender</th>
+                    <th data-sort="country" >Nationality</th>
                 </tr>
             </thead>
             <tbody>
@@ -117,7 +117,7 @@
                 <!-- 
                     Заповнюється динамічно DOM - методами
                 -->
-                
+
             </tbody>
         </table>
         <div class="pages-link">
