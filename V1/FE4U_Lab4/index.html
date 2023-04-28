@@ -56,37 +56,34 @@
                 <label for="age">Age</label>
                 <div class="separ-line">
                     <select id="age" name="age">
-                        <option value="1">18-31</option>
-                        <option value="2">32-46</option>
-                        <option value="3">47-60</option>
-                        <option value="4">61-74</option>
-                        <option value="5">74-more</option>
+                        <option value="1">18-35</option>
+                        <option value="2">36-53</option>
+                        <option value="3">54-71</option>
+                        <option value="4">72-89</option>
+                        <option value="5">90-more</option>
                     </select>
                 </div>
-                <label for="region">Region</label>
+                <label for="country">Region</label>
                 <div class="separ-line">
-                    <select id="region" name="region">
-                        <option value="Europe">Europe</option>
-                        <option value="Asia">Asia</option>
-                        <option value="Africa">Africa</option>
-                        <option value="North America">North America</option>
-                        <option value="Latin America">Latin America</option>
-                        <option value="Oceania">Oceania</option>
+                    <select id="country" name="country">
+                        <!-- 
+                            <option value="Germany">Germany</option>
+                            Заповнюється динамічно DOM - методами
+                        -->
                     </select>
                 </div>
-                <label for="sex">Sex</label>
+                <label for="sex">Gender</label>
                 <div class="separ-line">
-                    <select id="sex" name="sex">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                     </select>
                 </div>
-                <input type="checkbox" name="only-photo" id="only-photo">
+                <input type="checkbox" name="only-favorits" id="only-favorits">
                 <div class="separ-line">
                     <label for="only-favorits">Only favorits</label>
                 </div>
-                <input type="checkbox" name="only-favorits" id="only-favorits">
+                <input type="checkbox" name="only-photo" id="only-photo">
                 <label for="only-photo">Only with photo</label>
             </form>
         </div>
@@ -116,76 +113,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Daisy Alexander</td>
-                    <td>Chemistry</td>
-                    <td>28</td>
-                    <td>Female</td>
-                    <td>Vietnam</td>
-                </tr>
-                <tr>
-                    <td>Julla Bradley</td>
-                    <td>Math</td>
-                    <td>26</td>
-                    <td>Female</td>
-                    <td>USA</td>
-                </tr>
-                <tr>
-                    <td>Rita Hart</td>
-                    <td>Art</td>
-                    <td>41</td>
-                    <td>Female</td>
-                    <td>Irland</td>
-                </tr>
-                <tr>
-                    <td>Jonathan Jacobs</td>
-                    <td>Math</td>
-                    <td>52</td>
-                    <td>Male</td>
-                    <td>Endland</td>
-                </tr>
-                <tr>
-                    <td>Nathaniel White</td>
-                    <td>Computer Science</td>
-                    <td>37</td>
-                    <td>Male</td>
-                    <td>Austria</td>
-                </tr>
-                <tr>
-                    <td>Frank Medina</td>
-                    <td>English</td>
-                    <td>43</td>
-                    <td>Mate</td>
-                    <td>Italy</td>
-                </tr>
-                <tr>
-                    <td>Ella Curtis</td>
-                    <td>Chess</td>
-                    <td>34</td>
-                    <td>Female</td>
-                    <td>USA</td>
-                </tr>
-                <tr>
-                    <td>Claire Simmmons</td>
-                    <td>Art</td>
-                    <td>38</td>
-                    <td>Female</td>
-                    <td>Netherlands</td>
-                </tr>
-                <tr>
-                    <td>Benjamin Knight</td>
-                    <td>Biology</td>
-                    <td>44</td>
-                    <td>Male</td>
-                    <td>Scotland</td>
-                </tr>
-                <tr>
-                    <td>Norma Rose</td>
-                    <td>Statistics</td>
-                    <td>36</td>
-                    <td>Female</td>
-                    <td>France</td>
-                </tr>
+
+                <!-- 
+                    Заповнюється динамічно DOM - методами
+                -->
+                
             </tbody>
         </table>
         <div class="pages-link">

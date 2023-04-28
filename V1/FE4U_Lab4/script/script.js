@@ -33,39 +33,32 @@ export const formatObject = (arr1 = randomUserMock, arr2 = additionalUsers) => {
         // Данні з обєкту random-user-mock привести до вигляду:
 
         const formattedUser = {
-            "gender": obj.gender,
-            "title": obj.name.title,
-            "full_name": `${obj.name.first} ${obj.name.last}`,
-            "city": obj.location.city,
-            "state": obj.location.state,
-            "country": obj.location.country,
-            "postcode": obj.location.postcode,
-            "coordinates": obj.location.coordinates,
-            "timezone": obj.location.timezone,
-            "email": obj.email,
-            "b_date": obj.dob.date,
-            "age": obj.dob.age,
-            "phone": obj.phone,
-            "picture_large": obj.picture.large,
-            "picture_thumbnail": obj.picture.thumbnail
+            id: obj.id.value,
+            favorite: obj.favorite,
+            course: obj.courses,
+            bg_color: obj.bg_color,
+            note: obj.note,
+            gender: obj.gender,
+            title: obj.name.title,
+            full_name: `${obj.name.first} ${obj.name.last}`,
+            city: obj.location.city,
+            state: obj.location.state,
+            country: obj.location.country,
+            postcode: obj.location.postcode,
+            coordinates: obj.location.coordinates,
+            timezone: obj.location.timezone,
+            email: obj.email,
+            b_date: obj.dob.date,
+            age: obj.dob.age,
+            phone: obj.phone,
+            picture_large: obj.picture.large,
+            picture_thumbnail: obj.picture.thumbnail
         };
 
-        // До кожного з об’єктів масиву додати поля: id, favorite, course, bg_color, note
 
-        const addField = {
-            id: generateId(11),
-            favorite: null,
 
-            // Значення поля course заповнювати рандомно зі списку: 
-            course: courses[randomNumber(courses.length - 1)],
-            bg_color: generateRandomColor(),
-            note: null
-        }
-
-        const newObject = Object.assign(formattedUser, addField);
-        normalArray.push(newObject);
+        normalArray.push(formattedUser);
     });
-
 
     // По’єднати два обєкти в один, позбуваючись повторів
 
@@ -80,6 +73,24 @@ export const formatObject = (arr1 = randomUserMock, arr2 = additionalUsers) => {
 
         }
     });
+
+    normalArray.forEach((obj) => {
+        if (obj.id == null || obj.id == undefined) {
+            obj.id = generateId(11);
+        }
+
+        if (obj.course == null || obj.course == undefined) {
+            obj.course = courses[randomNumber(courses.length - 1)];
+        }
+
+        if (obj.bg_color == null || obj.bg_color == undefined) {
+            obj.bg_color = generateRandomColor();
+        }
+
+        if (obj.favorite == null || obj.favorite == undefined) {
+            obj.favorite = Math.random() < 0.05; //5% probability of getting true ;
+        }
+    })
 
     return normalArray;
 }
@@ -142,7 +153,7 @@ export const validateObject = (arr) => {
 export const filterArr = (arr, country, age, gender, favorite) => {
     return arr.filter(obj =>
         obj.country == country &&
-        obj.age == age &&
+        (obj.age >= age.min && obj.age < age.max) &&
         obj.gender == gender &&
         obj.favorite == favorite
     );
