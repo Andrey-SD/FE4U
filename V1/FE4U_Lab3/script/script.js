@@ -200,7 +200,7 @@ console.log(sortedArr);
 // Завдання 5
 
 const findObject = (arr, param, val) => {
-    return arr.find(a => a[param] == val);
+    return arr.filter(obj => obj[param] === val);
 }
 
 const findedObj = findObject(formatedArray, 'gender', 'male');

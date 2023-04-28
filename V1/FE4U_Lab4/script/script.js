@@ -1,6 +1,6 @@
 import { randomUserMock, additionalUsers } from './FE4U-Lab3-mock.js';
 
-export const formatObject = (arr1, arr2) => {
+export const formatObject = (arr1 = randomUserMock, arr2 = additionalUsers) => {
     const courses = ['Mathematics', 'Physics', 'English', 'Computer Science', 'Dancing', 'Chess', 'Biology', 'Chemistry',
         'Law', 'Art', 'Medicine', 'Statistics'];
 
@@ -73,6 +73,11 @@ export const formatObject = (arr1, arr2) => {
         const f = normalArray.filter(o => o.full_name == element.full_name);
         if (!f.length) {
             normalArray.push(element);
+        } else {
+            for (const key in f[0]) {
+                f[0][key] = element[key];
+            }
+
         }
     });
 
@@ -171,7 +176,7 @@ export const sortArray = (arr, param, order) => {
 }
 
 export const findObject = (arr, param, val) => {
-    return arr.find(a => a[param] == val);
+    return arr.filter(obj => obj[param] === val);
 }
 
 export const statArr = (arr, condition) => {
