@@ -442,6 +442,17 @@ ul.fl {
 	color: var(--color-а);
 }
 
+#nnOrAgeSearch {
+	font-size: 1.1rem;
+	padding: 16px;
+}
+
+#nnOrAgeSearch:hover,
+#nnOrAgeSearch:focus {
+	font-size: 1.1rem;
+	width:  400px;
+}
+
 @font-face {
 	font-family: "NotoSans";
 	src: url(../font/NotoSansJP-VariableFont_wght.ttf);

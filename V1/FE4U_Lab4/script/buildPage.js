@@ -1,5 +1,6 @@
 import { formatObject, findObject, filterArr, sortArray } from "./script.js";
 
+
 // Завдання 1
 
 const buildTeachersList = (teachersList, section) => {
@@ -70,6 +71,23 @@ const buildStaticTable = (teachersList, section) => {
         section.insertAdjacentHTML('beforeend', HTMLString);
     });
 }
+
+
+// Завдання 4
+const searchLink = document.getElementById('searchLink');
+
+searchLink.addEventListener('click', () => {
+    const nnOrAgeSearch = document.getElementById('nnOrAgeSearch');
+    const val = nnOrAgeSearch.value;
+    if (val) {
+        nnOrAgeSearch.value = ''
+        const findTeacher = findObject(formatObject(), val);
+        console.log(findTeacher);
+        const teachersContainer = document.getElementById('teachers-container');
+        buildTeachersList(findTeacher, teachersContainer);
+    }
+})
+
 
 const sortStaticHeader = document.getElementById('sortStaticHeader');
 sortStaticHeader.addEventListener('click', (event) => {
