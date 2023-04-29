@@ -196,7 +196,11 @@ export const sortArray = (arr, param, order = 'asc') => {
     return arr.slice().sort(compareFunction);
 }
 
-export const findObject = (arr, val) => {
+export const findObject = (arr, param, val) => {
+    return arr.filter(obj => obj[param] === val);
+}
+
+export const findTeachers = (arr, val) => {
     return arr.filter(obj =>
         obj.full_name.toLowerCase().includes(val.toLowerCase()) ||
         obj.note == val ||

@@ -1,4 +1,4 @@
-import { formatObject, findObject, filterArr, sortArray } from "./script.js";
+import { formatObject, findObject, filterArr, sortArray, findTeachers } from "./script.js";
 
 
 // Завдання 1
@@ -33,6 +33,14 @@ const buildTeachersList = (teachersList, section) => {
         section.insertAdjacentHTML('beforeend', HTMLString);
     });
 };
+
+const teachersContainer = document.getElementById('teachers-container');
+const allTeacher = formatObject();
+buildTeachersList(allTeacher, teachersContainer);
+
+const favoriteTeacherContainer = document.getElementById('favorite-teachers-container');
+const favoriteTeacher = findObject(formatObject(), 'favorite', true);
+buildTeachersList(favoriteTeacher, favoriteTeacherContainer);
 
 
 // Завдання 2
@@ -72,6 +80,10 @@ const buildStaticTable = (teachersList, section) => {
     });
 }
 
+const staticContainer = document.querySelector('#stat-table tbody');
+const staticTeacher = sortArray(formatObject(), 'full_name');
+buildStaticTable(staticTeacher, staticContainer);
+
 
 // Завдання 4
 const searchLink = document.getElementById('searchLink');
@@ -81,7 +93,7 @@ searchLink.addEventListener('click', () => {
     const val = nnOrAgeSearch.value;
     if (val) {
         nnOrAgeSearch.value = ''
-        const findTeacher = findObject(formatObject(), val);
+        const findTeacher = findTeachers(formatObject(), val);
         console.log(findTeacher);
         const teachersContainer = document.getElementById('teachers-container');
         buildTeachersList(findTeacher, teachersContainer);
@@ -93,29 +105,14 @@ sortStaticHeader.addEventListener('click', (event) => {
     const staticContainer = document.querySelector('#stat-table tbody');
     const staticTeacher = sortArray(formatObject(), event.target.dataset.sort);
     buildStaticTable(staticTeacher, staticContainer);
-    console.log(staticTeacher);
 });
+
 
 // Завдання 5
 
-
-
-
-
-// відображаемо вчителів при завантаженні сторінки
-
-document.addEventListener('DOMContentLoaded', () => {
-    const teachersContainer = document.getElementById('teachers-container');
-    const allTeacher = formatObject();
-    buildTeachersList(allTeacher, teachersContainer);
-
-    const favoriteTeacherContainer = document.getElementById('favorite-teachers-container');
-    const favoriteTeacher = findObject(formatObject(), 'favorite', true);
-    buildTeachersList(favoriteTeacher, favoriteTeacherContainer);
-
-    const staticContainer = document.querySelector('#stat-table tbody');
-    const staticTeacher = sortArray(formatObject(), 'full_name');
-    buildStaticTable(staticTeacher, staticContainer);
+const addTeacherForm = document.getElementById('add-teacher-form');
+addTeacherForm.addEventListener('submit', () => {
+    console.log('submit');
 });
 
 
