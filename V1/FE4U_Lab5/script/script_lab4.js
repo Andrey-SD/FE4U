@@ -96,9 +96,23 @@ sortStaticHeader.addEventListener('click', (event) => {
 
 // Завдання 5
 
-const addTeacherForm = document.getElementById('add-teacher-form');
-addTeacherForm.addEventListener('submit', () => {
-    console.log('submit');
+const addTeacher = document.querySelector('#add-teacher-form');
+
+addTeacher.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log('ogh');
+  const formData = new FormData(addTeacher);
+  
+  fetch('http://localhost:3000/teachers', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(Object.fromEntries(formData))
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
 });
 
 
